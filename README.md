@@ -1,5 +1,4 @@
-# league-project
+#Leaguerinos-Gameception
 league API project repo
 
-
-test branch update
+no notepad++ on this laptop zzzzz
