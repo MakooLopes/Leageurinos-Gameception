@@ -10,13 +10,27 @@
 <form action=>
   <input type="text" name="summonerName value="SummonerName" >
   <br>
-  <input type="button" value="Submit" onclick="window.location.href = 'summonerProfile.html' ">
+  <input type="button" value="submit" onclick="callRiot()">
+  <!-- <input type="button" value="Submit" onclick="window.location.href = 'summonerProfile.html' "> -->
 </form> 
 
 <script>
-	function callRiot() {
-	<!-- api call goes here, maybe also function to navigate to next page?, do we need this if we use action? --> 
-	}
+function callRiot() {
+
+var request = new XMLHttpRequest()
+
+request.open('GET', 'https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/Bundle%20%C3%B3f%20sticks?api_key=RGAPI-e8358307-1a8e-425e-8616-b9cb4307c855', true)
+
+request.onload = function () {
+	var dataString = JSON.stringify(this.responce)
+	console.log(dataString)
+}
+
+request.send()
+
+}
 </script>
+
+<!-- <script src="callRiot.js></script> --> 
 </body>
 </html>
