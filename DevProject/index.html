@@ -12,21 +12,26 @@
   <br>
   <input type="button" value="submit" onclick="callRiot()">
   <!-- <input type="button" value="Submit" onclick="window.location.href = 'summonerProfile.html' "> -->
-</form> 
+</form>
+
+<script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
 
 <script>
-function callRiot() {
+function callRiot() 
+{
 
-var request = new XMLHttpRequest()
+	var request = new XMLHttpRequest()
 
-request.open('GET', 'https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/Bundle%20%C3%B3f%20sticks?api_key=RGAPI-e8358307-1a8e-425e-8616-b9cb4307c855', true)
+	request.open('GET', 'https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/Bundle%20%C3%B3f%20sticks?api_key=RGAPI-e8358307-1a8e-425e-8616-b9cb4307c855', true)
 
-request.onload = function () {
-	var dataString = JSON.stringify(this.responce)
-	console.log(dataString)
-}
+	request.onload = function () 
+	{
+		var dataString = JSON.stringify(this.responce)
+		console.log(dataString)
+	}
 
-request.send()
+	request.send()
 
 }
 </script>
